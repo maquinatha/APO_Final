@@ -1,0 +1,1 @@
+#pip install fastapi para instalar la biblioteca fast api
