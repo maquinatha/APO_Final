@@ -7,13 +7,20 @@ app=FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    all_credentials=True,
+    allow_credentials= True,
     allow_methods=["*"],
-    
-)
+    allow_headers=    ["*"]
+    )
 
 
 
 @app.get("/sumar")
-def sumar_numeros(a:b):
+def sumar_numeros(a:float , b:float):
     return a+b
+
+@app.get("/resta")
+def sumar_numeros(a:float , b:float):
+    return a-b
+
+
+
